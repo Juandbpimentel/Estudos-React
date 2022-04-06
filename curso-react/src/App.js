@@ -1,15 +1,36 @@
+import { BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom';
 import './App.css';
-import HelloWorld from './components/HelloWorld';
+import Contato from './pages/Contato';
+import Empresa from './pages/Empresa';
+import Home from './pages/Home';
 
 
 function App() {
-  const url = 'https://via.placeholder.com/150'
   return (
-    <div className="App">
-      <h1>Alterando JSX</h1>
-      <HelloWorld/>
-      <img src={url} alt='Minha imagem' />
-    </div>
+    <Router>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/empresa">Empresa</Link>
+        </li>
+        <li>
+          <Link to="/contato">Contato</Link>
+        </li>
+      </ul>
+      <Switch>
+        <Route path="/">
+          <Home/>
+        </Route>
+        <Route path="/empresa">
+          <Empresa/>
+        </Route>
+        <Route path="/contato">
+          <Contato/>
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
