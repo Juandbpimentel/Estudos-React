@@ -8,23 +8,23 @@ import Navbar from './components/layout/Navbar';
 
 
 function App() {
-  return (
-    <Router>
-      <Navbar/>
-      <Switch>
-        <Route exact path="/">
-          <Home/>
-        </Route>
-        <Route exact path="/empresa">
-          <Empresa/>
-        </Route>
-        <Route exact path="/contato">
-          <Contato/>
-        </Route>
-      </Switch>
-      <Footer/>
-    </Router>
-  );
+	return (
+		<Router>
+			<Navbar/>
+			<Switch>
+				<Route exact path="/">
+					<Home/>
+				</Route>
+				<Route exact path="/empresa">
+					<Empresa/>
+				</Route>
+				<Route exact path="/contato">
+					<Contato/>
+				</Route>
+			</Switch>
+			<Footer/>
+		</Router>
+	);
 }
 
 export default App;
