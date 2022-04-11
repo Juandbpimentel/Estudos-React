@@ -1,0 +1,44 @@
+{
+  "projects": [
+    {
+      "category": {
+        "id": "1",
+        "name": "Infra"
+      },
+      "name": "Instituto dos Cegos",
+      "budget": "20000",
+      "cost": 0,
+      "services": [],
+      "id": 7
+    },
+    {
+      "name": "Projeto de Teste",
+      "budget": "20000.00",
+      "category": {
+        "id": "3",
+        "name": "Design"
+      },
+      "cost": 0,
+      "services": [],
+      "id": 8
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Infra"
+    },
+    {
+      "id": 2,
+      "name": "Desenvolvimento"
+    },
+    {
+      "id": 3,
+      "name": "Design"
+    },
+    {
+      "id": 4,
+      "name": "Planejamento"
+    }
+  ]
+}
