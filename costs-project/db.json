@@ -6,21 +6,10 @@
         "name": "Infra"
       },
       "name": "Instituto dos Cegos",
-      "budget": "20000",
+      "budget": "15000",
       "cost": 0,
       "services": [],
       "id": 7
-    },
-    {
-      "name": "Projeto de Teste",
-      "budget": "20000.00",
-      "category": {
-        "id": "3",
-        "name": "Design"
-      },
-      "cost": 0,
-      "services": [],
-      "id": 8
     }
   ],
   "categories": [
