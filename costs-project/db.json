@@ -5,10 +5,23 @@
         "id": "1",
         "name": "Infra"
       },
-      "name": "Instituto dos Cegos",
+      "name": "Instituto dos Cegos aaa",
       "budget": "15000",
-      "cost": 0,
-      "services": [],
+      "cost": 2131,
+      "services": [
+        {
+          "name": "Aaaaaa",
+          "cost": "2031",
+          "description": "testeeeeeeeeeeeeee",
+          "id": "b913e7a5-86da-45d9-b797-a5cba4f2f573"
+        },
+        {
+          "name": "testeeeeee",
+          "cost": "100",
+          "description": "tasdasd",
+          "id": "3ec04f62-d0f8-4b87-99d2-d5a5632dada7"
+        }
+      ],
       "id": 7
     }
   ],
