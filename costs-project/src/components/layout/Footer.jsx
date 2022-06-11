@@ -13,7 +13,7 @@ function Footer() {
                     <FaInstagram />
                 </li>
                 <li>
-                    <FaLinkedin />
+                    <a href='https://www.linkedin.com/in/juan-pimentel-3b6a67221/'><FaLinkedin /></a>
                 </li>
             </ul>
             <p className={styles.copy_right}>

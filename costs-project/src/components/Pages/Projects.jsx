@@ -24,11 +24,10 @@ const Projects = () => {
 			})
 				.then((resp) => resp.json())
 				.then((data) => {
-					console.log(data);
 					setProjects(data);
 					setRemoveLoading(true);
 				})
-				.then((err) => console.log(err));
+				.catch((err) => console.log(err));
 		}, 300);
 	}, []);
 
@@ -57,7 +56,7 @@ const Projects = () => {
 		<div className={styles.project_container}>
 			<div className={styles.title_container}>
 				<h1>Meus Projetos</h1>
-				<LinkButton to="newproject" text="Criar Projeto" />
+				<LinkButton to="/newproject" text="Criar Projeto" />
 			</div>
 			{message && <Message type="success" msg={message} />}
 			{projectMessage && <Message type="success" msg={projectMessage} />}

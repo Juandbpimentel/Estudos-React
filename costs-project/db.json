@@ -1,28 +1,22 @@
 {
   "projects": [
     {
+      "name": "Instituto dos Cegos",
+      "budget": "20000",
       "category": {
-        "id": "1",
-        "name": "Infra"
+        "id": "3",
+        "name": "Design"
       },
-      "name": "Instituto dos Cegos aaa",
-      "budget": "15000",
-      "cost": 2131,
+      "cost": 5000,
       "services": [
         {
-          "name": "Aaaaaa",
-          "cost": "2031",
-          "description": "testeeeeeeeeeeeeee",
-          "id": "b913e7a5-86da-45d9-b797-a5cba4f2f573"
-        },
-        {
-          "name": "testeeeeee",
-          "cost": "100",
-          "description": "tasdasd",
-          "id": "3ec04f62-d0f8-4b87-99d2-d5a5632dada7"
+          "name": "Equipe de desenvolvimento",
+          "cost": "5000",
+          "description": "teste",
+          "id": "e83c72a5-ab5f-4da2-a73a-99c1e204ca8e"
         }
       ],
-      "id": 7
+      "id": 9
     }
   ],
   "categories": [

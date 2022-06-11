@@ -1,6 +1,6 @@
 import styles from "./Project.module.css";
 
-import { parse, v4 as uuidv4 } from "uuid";
+import { v4 as uuidv4 } from "uuid";
 
 import axios from "axios";
 import { useParams } from "react-router-dom";
@@ -29,7 +29,6 @@ function Project() {
 				.then((resp) => {
 					setProject(resp.data);
 					setServices(resp.data.services);
-					console.log(resp.data);
 				})
 				.catch((err) => console.log(err));
 		}, 300);
@@ -51,8 +50,8 @@ function Project() {
 			.then((resp) => {
 				setProject(resp.data);
 				setShowProjectForm(!showProjectForm);
-				setMessage("Projeto atualizado!");
 				setType("success");
+				setMessage("Projeto atualizado!");
 			})
 			.catch((err) => console.log(err));
 	}
@@ -60,7 +59,6 @@ function Project() {
 	function createService(project) {
 		setMessage("");
 		//last service
-		console.log(project);
 		const lastService = project.services[project.services.length - 1];
 		lastService.id = uuidv4();
 
@@ -82,8 +80,8 @@ function Project() {
 			.patch(`http://localhost:5000/projects/${project.id}`, project)
 			.then((resp) => {
 				//exibir servicos
-				setMessage("Serviço adicionado com sucesso!");
 				setType("success");
+				setMessage("Serviço adicionado com sucesso!");
 				setShowServiceForm(false);
 			})
 			.catch((err) => console.log(err));
@@ -96,7 +94,27 @@ function Project() {
 		setShowServiceForm(!showServiceForm);
 	}
 
-	function removeService(id) {}
+	function removeService(id, cost) {
+		const servicesUpdated = project.services.filter(
+			(service) => service.id !== id
+		);
+		const projectUpdated = project;
+		projectUpdated.services = servicesUpdated;
+		projectUpdated.cost -= parseFloat(cost);
+
+		axios
+			.patch(
+				`http://localhost:5000/projects/${projectUpdated.id}`,
+				projectUpdated
+			)
+			.then((resp) => {
+				setProject(projectUpdated);
+				setServices(servicesUpdated);
+				setType("success");
+				setMessage("Serviço Removido com sucesso!");
+			})
+			.catch((err) => console.log(err));
+	}
 
 	return (
 		<>
